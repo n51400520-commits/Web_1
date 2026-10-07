@@ -1,0 +1,507 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    color: #ffffff;
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* --- Переключатель языков --- */
+.lang-switch {
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.lang-btn {
+    background: transparent;
+    border: 1px solid #ffffff;
+    color: #ffffff;
+    padding: 6px 14px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 13px;
+    transition: all 0.3s ease;
+}
+
+.lang-btn:hover, 
+.lang-btn.active {
+    background-color: #25aae1;
+    border-color: #25aae1;
+    color: #ffffff;
+}
+
+/* --- Шапка --- */
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('img/Fon.png') center/cover no-repeat;
+    padding: 20px 0 30px;
+    text-align: center;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.logo-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 25px;
+}
+
+.logo-img {
+    width: 50px;
+    height: auto;
+}
+
+.logo-text {
+    font-size: 13px;
+    letter-spacing: 1.5px;
+    color: #25aae1;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.promo-title {
+    color: #f9a825;
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.main-title {
+    font-size: 52px;
+    font-weight: 900;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.sub-title {
+    color: #f9a825;
+    font-size: 26px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+}
+
+.description {
+    max-width: 850px;
+    margin: 0 auto 30px;
+    font-size: 15px;
+    line-height: 1.6;
+    color: #e0e0e0;
+    font-weight: 300;
+}
+
+.description span {
+    color: #f9a825;
+    font-weight: bold;
+}
+
+/* --- Кнопка --- */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 280px;
+    padding: 18px 36px;
+    background: linear-gradient(to bottom, #25aae1, #1b82ae);
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 4px;
+    box-shadow: 0 4px 15px rgba(37, 170, 225, 0.4);
+    text-transform: uppercase;
+    transition: transform 0.2s, background 0.3s;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: #1b82ae;
+    transform: translateY(-2px);
+}
+
+.more {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: #adadad;
+    margin-top: 45px;
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+
+.more p {
+    color: #ffffff;
+    margin-bottom: 5px;
+}
+
+.arrow {
+    font-size: 18px;
+    color: #ffffff;
+}
+
+/* --- Особенности --- */
+.features {
+    background-color: #efefef;
+    color: #222222;
+    padding: 60px 0 70px;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 26px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #252525;
+}
+
+.title-line {
+    width: 180px;
+    height: 4px;
+    background-color: #f9a825;
+    margin: 12px auto 18px;
+}
+
+.section-subtitle {
+    font-size: 16px;
+    color: #4a4a4a;
+    margin-bottom: 45px;
+}
+
+.features-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.feature-item {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.feature-img {
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.feature-img img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.feature-text {
+    font-size: 13px;
+    line-height: 1.6;
+    color: #4a4a4a;
+    max-width: 320px;
+}
+
+/* --- Оптимизация --- */
+.optimization {
+    padding: 60px 0;
+    background-color: #ffffff;
+    color: #292929;
+}
+
+.optimization-container {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.optimization-img {
+    flex: 1;
+}
+
+.optimization-img img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.optimization-text {
+    flex: 1.2;
+}
+
+.optimization-text h2 {
+    color: #25aae1;
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.optimization-text p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #4a4a4a;
+    margin-bottom: 15px;
+}
+
+.optimization-text .highlight {
+    font-weight: bold;
+    color: #292929;
+}
+
+/* --- По окончании обучения --- */
+.finish {
+    background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('img/second_bg.jpg') center/cover no-repeat;
+    padding: 60px 0 70px;
+    text-align: center;
+    color: #ffffff;
+}
+
+.finish-title {
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.finish-line {
+    width: 180px;
+    height: 4px;
+    background-color: #f9a825;
+    margin: 12px auto 45px;
+}
+
+.finish-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.finish-item {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.finish-icon {
+    width: 110px;
+    height: 110px;
+    background-color: #b4e2f5;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 18px;
+}
+
+.finish-icon img {
+    max-width: 55px;
+    max-height: 55px;
+}
+
+.finish-item p {
+    font-size: 13px;
+    line-height: 1.4;
+    color: #e0e0e0;
+    max-width: 180px;
+}
+
+/* --- Подарки --- */
+.gifts {
+    background-color: #efefef;
+    padding: 50px 0;
+    text-align: center;
+    color: #252525;
+}
+
+.gift-icon {
+    width: 90px;
+    height: auto;
+    margin-bottom: 25px;
+}
+
+.gift-text {
+    max-width: 680px;
+    margin: 0 auto 30px;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #252525;
+}
+
+.btn-gift {
+    background: linear-gradient(to bottom, #25aae1, #1b82ae);
+}
+
+/* --- Вебинар --- */
+.webinar-info {
+    padding: 50px 0;
+    text-align: center;
+    color: #252525;
+    background-color: #ffffff;
+}
+
+.webinar-icon {
+    width: 120px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.webinar-info h2 {
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}
+
+.webinar-date {
+    font-size: 28px;
+    font-weight: 900;
+    color: #25aae1;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.webinar-sub {
+    font-size: 15px;
+    color: #4a4a4a;
+}
+
+/* --- Футер --- */
+.footer {
+    background-color: #1a1a1a;
+    padding: 25px 0;
+    text-align: center;
+    font-size: 12px;
+    color: #888888;
+}
+
+.footer a {
+    color: #888888;
+    text-decoration: underline;
+}
+
+.footer a:hover {
+    color: #ffffff;
+}
+
+.footer .phone {
+    margin-top: 8px;
+    color: #888888;
+}
+
+/* --- Кнопка Наверх --- */
+#scrollTopBtn {
+    display: none;
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    z-index: 999999;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #25aae1;
+    color: #ffffff;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    align-items: center;
+    justify-content: center;
+}
+
+#scrollTopBtn:hover {
+    background-color: #1b82ae;
+    transform: translateY(-3px);
+}
+
+#scrollTopBtn:active {
+    transform: scale(0.95);
+}
+
+/* --- Адаптивность для мобильных экранов (до 768px) --- */
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .main-title {
+        font-size: 32px;
+    }
+
+    .sub-title {
+        font-size: 18px;
+    }
+
+    .features-grid,
+    .finish-grid,
+    .optimization-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .feature-item,
+    .finish-item {
+        width: 100%;
+        max-width: 320px;
+    }
+
+    .optimization-text {
+        text-align: center;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .btn {
+        width: 100%;
+        max-width: 320px;
+        font-size: 16px;
+        padding: 16px 20px;
+    }
+
+    #scrollTopBtn {
+        bottom: 15px;
+        right: 15px;
+        width: 45px;
+        height: 45px;
+    }
+}
