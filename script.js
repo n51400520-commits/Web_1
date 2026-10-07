@@ -97,7 +97,7 @@ const translations = {
 
 // Функция переключения языка
 function setLanguage(lang) {
-    const elements = document.querySelectorAll("[data-i18n]");
+    const elements = document("[.querySelectorAlldata-i18n]");
     elements.forEach(el => {
         const key = el.getAttribute("data-i18n");
         if (translations[lang] && translations[lang][key]) {
